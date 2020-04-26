@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.TestEmojiActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/emotionsEmojiTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_your_emotion"/>
+
+        <LinearLayout
+            android:id="@+id/emotionsEmojiLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/emotionsEmojiTextView"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/angdryEmjiImageView"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/angry_emoji"
+                android:src="@drawable/angry_emoji"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/sadEmojiImageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/sad_emoji"
+                android:src="@drawable/sad_emoji"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/cryEmojiImageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/cry_emoji"
+                android:src="@drawable/cry_emoji"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/neutralEmojiImageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/neutral_emoji"
+                android:src="@drawable/neutral_emoji"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/smileEmojiImageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/smile_emoji"
+                android:src="@drawable/smile_emoji"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/bigSmileEmojiImageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/big_smile_emoji"
+                android:src="@drawable/big_smile_emoji"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/weatherTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_current_weather"
+            android:layout_below="@id/emotionsEmojiLayout"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/weatherTextView">
+
+            <ImageView
+                android:id="@+id/strormImageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/storm"
+                android:src="@drawable/storm"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/rainImageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/rain"
+                android:src="@drawable/rain"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/cloudImageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/clouds"
+                android:src="@drawable/clouds"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/cloudRainSunImageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/cloud_rain_and_sun"
+                android:src="@drawable/cloud_rain_sun"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/cloudSunImageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/cloud_and_sun"
+                android:src="@drawable/cloud_sun"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:id="@+id/sunImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/sun"
+                android:src="@drawable/sun"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

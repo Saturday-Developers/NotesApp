@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">NotesApp</string>
+    <string name="smile_emoji">Smile emoji</string>
+    <string name="big_smile_emoji">Big smile emoji</string>
+    <string name="cry_emoji">Cry emoji</string>
+    <string name="neutral_emoji">Neutral emoji</string>
+    <string name="sad_emoji">Sad emoji</string>
+    <string name="choose_your_emotion">Choose your emotion</string>
+    <string name="choose_current_weather">Choose current weather</string>
+    <string name="storm">Storm</string>
+    <string name="rain">Rain</string>
+    <string name="cloud_and_sun">Cloud And Sun</string>
+    <string name="cloud_rain_and_sun">Cloud, Rain And Sun</string>
+    <string name="sun">Sun</string>
+    <string name="clouds">Clouds</string>
+    <string name="angry_emoji">Angry emoji</string>
 </resources>
