@@ -3,8 +3,14 @@ package itmo.notes.activities
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import itmo.notes.R
+import itmo.notes.models.Note
 import kotlinx.android.synthetic.main.activity_charts.*
 import lecho.lib.hellocharts.model.*
 import lecho.lib.hellocharts.view.LineChartView
@@ -17,6 +23,32 @@ class ChartsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_charts)
         textView.text = "Hello, Tanya!"
         populateTestChart()
+        GetNotesList()
+    }
+
+    private fun GetNotesList(){
+        val url = "https://saturday-developers-app.herokuapp.com/notes/"
+        val queue = Volley.newRequestQueue(this)
+        val stringRequest = StringRequest(
+            Request.Method.GET, url,
+            Response.Listener<String> { response ->
+                val listType = object : TypeToken<List<Note>>() { }.type
+                val notes= Gson().fromJson<List<Note>>(response, listType)
+                if(notes!=null)
+                {
+                    getDataForCharts(notes)
+                }
+            },
+            Response.ErrorListener { error ->
+                val errorResponse = "Error while sending request to ${url}: ${error.message}"
+            })
+
+        queue.add(stringRequest)
+    }
+
+    private fun getDataForCharts(notes: List<Note>)
+    {
+        textView.text = notes[0].description
     }
 
     private fun populateTestChart(){
