@@ -46,6 +46,12 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//        notesListRequest()
+
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
         notesListRequest()
     }
 
@@ -61,7 +67,7 @@ class HomeFragment : Fragment() {
             Response.Listener<String> { response ->
                 val listType = object : TypeToken<ArrayList<Note>>() { }.type
                 val noteList = Gson().fromJson<ArrayList<Note>>(response, listType)
-                listView.adapter = NoteAdapter(requireContext(), noteList)
+                listView?.adapter = NoteAdapter(requireContext(), noteList)
             },
             Response.ErrorListener { error ->
                 val errorResponse = "Error while sending request to ${url}: ${error.message}"

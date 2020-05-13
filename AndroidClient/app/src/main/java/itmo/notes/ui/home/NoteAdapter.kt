@@ -37,7 +37,7 @@ class NoteAdapter(private val context: Context,
         }
         rowView.findViewById<ImageView>(R.id.mood_image).setImageResource(mood_resource)
 
-        var weather_resource = when(dataitem.mood_rating) {
+        var weather_resource = when(dataitem.weather_rating) {
             1 -> R.drawable.storm
             2 -> R.drawable.rain
             3 -> R.drawable.clouds
