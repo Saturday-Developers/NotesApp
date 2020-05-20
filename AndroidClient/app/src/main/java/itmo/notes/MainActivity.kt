@@ -29,12 +29,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
-            )
-        )
+        
 //        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
@@ -42,21 +37,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         leftNavView.setNavigationItemSelectedListener(this)
 
-//        userInfo = AppDatabase.getInstance(applicationContext)?.stockDAO()?.checkHaveUser()
 
         val loginText = leftNavView.getHeaderView(0).findViewById<TextView>(R.id.login_info_menu)
 
-//        userInfo?.observe(this@MainActivity, Observer {
-//            val user = it ?: return@Observer
-//            if (user == 0) {
-//                loginText.text = "Вы не вошли в систему"
-//            } else {
-//                AppDatabase.getInstance(applicationContext)?.stockDAO()?.getUser()
-//                    ?.observeOn(AndroidSchedulers.mainThread())
-//                    ?.subscribeOn(Schedulers.io())
-//                    ?.subscribe { user -> loginText.text = "Вы вошли как ${user.displayName}" }
-//            }
-//        })
 
     }
 
