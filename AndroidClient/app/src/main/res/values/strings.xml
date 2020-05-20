@@ -20,4 +20,11 @@
     <string name="title_notifications">Notifications</string>
 
     <string name="login_status">Вы не вошли в систему</string>
+    <string name="prompt_email">Логин</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Войти</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="invalid_username">Введено некорректное имя</string>
+    <string name="invalid_password">Пароль должен содержать более 5 символов</string>
+    <string name="title_activity_login">Вход в систему</string>
 </resources>

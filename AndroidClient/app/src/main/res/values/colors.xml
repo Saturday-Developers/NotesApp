@@ -7,5 +7,6 @@
     <color name="text_on_bg">#FFEB3B</color>
     <color name="gradientStart">#00FF88</color>
     <color name="gradientStop">#BB00FF</color>
+    <color name="buttonColor">#5159A2D5</color>
 
 </resources>

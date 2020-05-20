@@ -31,15 +31,15 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textView">
+            android:layout_height="wrap_content">
 
             <lecho.lib.hellocharts.view.LineChartView
                 android:id="@+id/chart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_below="@id/textView"/>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
