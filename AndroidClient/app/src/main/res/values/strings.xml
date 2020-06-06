@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NotesApp</string>
+    <string name="app_name">Notes App</string>
     <string name="smile_emoji">Smile emoji</string>
     <string name="big_smile_emoji">Big smile emoji</string>
     <string name="cry_emoji">Cry emoji</string>
@@ -14,7 +14,7 @@
     <string name="sun">Sun</string>
     <string name="clouds">Clouds</string>
     <string name="angry_emoji">Angry emoji</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Notes App</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
