@@ -5,14 +5,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListView
-import android.widget.ProgressBar
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-
-
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
@@ -66,7 +61,8 @@ class HomeFragment : Fragment() {
             Request.Method.GET, url,
             Response.Listener<String> { response ->
                 val listType = object : TypeToken<ArrayList<Note>>() { }.type
-                val noteList = Gson().fromJson<ArrayList<Note>>(response, listType)
+                val utf8String = String(response.toByteArray(charset("ISO-8859-1")), charset("UTF-8"))
+                val noteList = Gson().fromJson<ArrayList<Note>>(utf8String, listType)
                 listView?.adapter = NoteAdapter(requireContext(), noteList)
             },
             Response.ErrorListener { error ->
