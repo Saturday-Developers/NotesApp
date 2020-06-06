@@ -6,27 +6,93 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginBottom="70dp">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <lecho.lib.hellocharts.view.LineChartView
-                android:id="@+id/chart"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textViewW"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_below="@id/textView"/>
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Weather chart"/>
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/weatherChart"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_below="@id/textViewW"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/textViewM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/weatherChart"
+                android:text="Mood chart"/>
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/moodChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/textViewM"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/textViewMW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/moodChart"
+                android:text="Mood-weather chart"/>
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/weatherMoodChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/textViewMW"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/textViewMWD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/weatherMoodChart"
+                android:text="Combined chart"/>
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/weatherMoodDateChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/textViewMWD"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/legendMood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_below="@id/weatherMoodDateChart"
+                android:text="Mood" />
+
+            <TextView
+                android:id="@+id/legendWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/legendMood"
+                android:text="Weather" />
+        </RelativeLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
