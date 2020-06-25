@@ -42,6 +42,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 //        notesListRequest()
+        addNoteButton.setOnClickListener {
+            Log.d("hello", "world")
+            getActivity()?.getSupportFragmentManager()?.beginTransaction()?.replace(R.id.homeLayout, AddNoteFragment())?.addToBackStack(null)?.commit()
+        }
 
     }
 
